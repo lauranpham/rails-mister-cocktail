@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container cocktail-show">
   <h1><%= @cocktail.name %></h1>
   <%=  cl_image_tag @cocktail.photo, height: 300, crop: :fill %>
 
   <% @cocktail.doses.each do |dose| %>
     <p><%= dose.description %> <%= dose.ingredient.name %></p>
-    <p><%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
+    <p> <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
   <% end %>
 
   <p><%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %></p>
