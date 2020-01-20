@@ -12,10 +12,14 @@ Ingredient.create(name: "passoa")
 Ingredient.create(name: "lime juice")
 Ingredient.create(name: "sugar syrup")
 
+puts '..Cocktails'
 # Creating Cocktails
 Cocktail.create(name: "Pornstar Martini")
 Cocktail.create(name: "Whisky Sour")
 Cocktail.create(name: "Pina Colada")
 Cocktail.create(name: "Mojito")
+
+puts '..Doses'
+# Creating Doses
 
 puts 'Finished!'
