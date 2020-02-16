@@ -7,15 +7,15 @@
 </div>
 
 <div class="container">
-  <h2>Cocktails List</h2>
+  <h2>Cocktails Menu</h2>
   <%= link_to "Add +", new_cocktail_path, class: 'btn btn-light'%>
   <br>
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <div class="card">
         <h2 class="title-link"><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
-        <% if cocktail.photo.present? %>
-          <%=  cl_image_tag cocktail.photo, height: 300, width: 330, crop: :fill %>
+        <% if cocktail.image_url.present? %>
+          <%=  cl_image_tag(cocktail.image_url, height: 300, width: 330, crop: :fill) %>
         <% end %>
         <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
       </div>
