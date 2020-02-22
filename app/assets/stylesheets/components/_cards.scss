@@ -7,27 +7,37 @@
 
 .cocktail-card{
   padding: 10px;
-  border-radius: 5px;
-  height: 300px;
+  border-radius: 3px;
+  height: 200px;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  vertical-align: center;
+  justify-content: center;
+  align-items: center;
   a {
-    color: white;
+    color: #d8d8d9;
     max-width: 100%;
-  }
-  img {
-    width: 100%;
-    object-fit: cover;
-    height: 250px;
+    transition: 0.3s ease;
+    display:inline-block;
   }
 
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px #BB8623;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  a:hover:after {
+    transform: scaleX(1);
+  }
 }
 
-.cocktail-image {
-
-}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

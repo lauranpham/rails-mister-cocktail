@@ -1,5 +1,5 @@
 <div class="container cocktail-show">
-  <h1><%= @cocktail.name %></h1>
+  <h1 class="heading"><%= @cocktail.name %></h1>
   <% if @cocktail.photo.attached? %>
     <%=  cl_image_tag(@cocktail.photo.key, height: 300, width: 330, crop: :fill) %>
   <% end %>
@@ -9,11 +9,9 @@
     <p> <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
   <% end %>
 
-  <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+  <div class="button-div">
+    <%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail), class: "cocktail-btn" %>
+    <%= link_to "Back", cocktails_path, class: "ghost-btn" %>
+  </div>
 
-  <p><%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %></p>
-
-  <br>
-
-  <%= link_to "Back", cocktails_path %>
 </div>

@@ -1,14 +1,12 @@
 <div class="container">
-  <h1>Add ingredient for a <%= @cocktail.name %></h1>
-
-  <%= simple_form_for([@cocktail, @dose]) do |f| %>
-    <%= f.association :ingredient %>
+  <h3 class="heading">Add new ingredient dose</h3>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
     <%= f.input :description %>
-    <%= f.submit class: "btn btn-primary" %>
+    <%= f.button :submit, class: "cocktail-btn" %>
   <% end %>
 
-  <br>
-
-  <%= link_to 'Back', cocktail_path(@cocktail) %>
-
+  <div class="button-div">
+    <%= link_to "Back", cocktail_path(@cocktail), class: "ghost-btn" %>
+  </div>
 </div>

@@ -12,14 +12,31 @@
 @import "components/index";
 @import "pages/index";
 
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display|Roboto:300|Staatliches&display=swap');
+
 body {
   background-color: #3F4045;
   color: white !important;
-
+  font-family: 'Roboto', sans-serif;
 }
-.container {
+
+.heading {
+  color: #d8d8d9;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+  font-size: 5vh;
+  letter-spacing: 0.05em;
+  margin: 10px auto;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
   text-align: center;
-  margin: 20px, 0px;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
 }
 
 .cocktail-show a {
