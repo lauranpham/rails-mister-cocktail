@@ -15,7 +15,7 @@
       <% else %>
         <% background_url = 'https://source.unsplash.com/500x400/?cocktail' %>
       <% end %>
-      <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('<%= background_url %>');">
+      <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
         <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
       </div>
     <% end %>
